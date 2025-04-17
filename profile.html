@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .user-card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 10px;
+            display: flex;
+            gap: 20px;
+        }
+        .user-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        #loading-indicator {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px;
+            background: #fffa90;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>This is testing HTML</h1>
+    <div id="loading-indicator">Loading...</div>
+    <div id="profile-container"></div>
+    <script type="module" src="./dist/bundle.min.js"></script>
+</body>
+
+</html>

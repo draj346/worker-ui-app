@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+      "checkJs": true, // Enable type checking for JavaScript files
+      "target": "ES2022",
+    },
+    "include": ["**/*.js"],
+    "exclude": ["node_modules", "**/node_modules/*"],
+  }

@@ -1,0 +1,32 @@
+{
+  "name": "mybl",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "gulp clean",
+    "build": "gulp build",
+    "production": "npm run clean && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@babel/cli": "^7.27.0",
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "core-js": "3.8",
+    "glob": "^11.0.1",
+    "gulp": "^5.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-terser": "^2.1.0",
+    "npm-run-all": "^4.1.5",
+    "regenerator-runtime": "^0.14.1",
+    "rimraf": "^6.0.1",
+    "shx": "^0.4.0",
+    "terser": "^5.39.0"
+  }
+}

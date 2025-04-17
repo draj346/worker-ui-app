@@ -1,0 +1,20 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "browsers": ["last 2 versions", "ie >= 11"]
+        },
+        "useBuiltIns": "usage",
+        "corejs": 3.8,
+        "bugfixes": true,
+        "modules": false,
+        "loose": true
+      }
+    ]
+  ],
+  "plugins": [
+    ["transform-remove-console", { "exclude": ["error", "warn"] }]
+  ]
+}
