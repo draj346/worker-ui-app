@@ -9,8 +9,7 @@
         "useBuiltIns": "usage",
         "corejs": 3.8,
         "bugfixes": true,
-        "modules": false,
-        "loose": true
+        "modules": "commonjs"
       }
     ]
   ],

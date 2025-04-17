@@ -1,28 +1,30 @@
 const gulp = require('gulp');
+const browserify = require('browserify');
+const source = require('vinyl-source-stream');
+const buffer = require('vinyl-buffer');
 const babel = require('gulp-babel');
 const terser = require('gulp-terser');
-const concat = require('gulp-concat');
 const rimraf = require('rimraf');
 
-// Clean output directory
 function clean(done) {
   rimraf.sync('dist');
   done();
 }
 
-// Transpile, polyfill, and bundle using .babelrc config
 function build() {
-  return gulp.src('scripts/UI/**/*.js')
-    .pipe(babel()) // Automatic .babelrc detection
-    .pipe(concat('bundle.min.js'))
+  return browserify('scripts/UI/index.js') // Entry point
+    .transform('babelify', {
+      extensions: ['.js'],
+      presets: ['@babel/preset-env'], // Inherits from .babelrc
+      plugins: ['transform-remove-console'] // Inherits from .babelrc
+    })
+    .bundle()
+    .pipe(source('bundle.min.js'))
+    .pipe(buffer())
     .pipe(terser({
-      compress: {
-        drop_console: true,
-        ecma: 5
-      },
-      mangle: {
-        toplevel: true
-      }
+      compress: { ecma: 5 },
+      mangle: { toplevel: true },
+      format: { comments: false }
     }))
     .pipe(gulp.dest('dist'));
 }
