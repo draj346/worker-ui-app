@@ -54,6 +54,6 @@ export class UserHandler extends BaseHandler {
 
   navigateToDetail(userId) {
     Storage.setPolicyNumber(userId);
-    window.location.href = "profile.html";
+    window.location.href = "/profile.html";
   }
 }

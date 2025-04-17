@@ -6,7 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "gulp clean",
     "build": "gulp build",
-    "production": "npm run clean && npm run build"
+    "production": "npm run clean && npm run build",
+    "watch": "gulp watch"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +21,7 @@
     "babel-plugin-transform-remove-console": "^6.9.4",
     "babelify": "^10.0.0",
     "browserify": "^17.0.1",
+    "chokidar": "^4.0.3",
     "core-js": "3.8",
     "glob": "^11.0.1",
     "gulp": "^5.0.0",
